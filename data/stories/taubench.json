@@ -2,38 +2,64 @@
   "set": "taubench",
   "title": "Banyan Sapling checks a real AI support agent's account changes before they run",
   "source_note": "Real public conversations from tau-bench (Sierra, MIT licence): GPT-4o and Claude 3.5 Sonnet as airline and retail agents, with the benchmark's own answer key.",
+  "shop_label": "tau-bench airline and retail desks (Sierra, public benchmark)",
+  "thesis": "An AI support agent can be talked into the wrong account change. Before any change runs, Banyan Sapling checks it against the written policy and the records the agent saw.",
+  "intro": {
+    "headline": "An AI support agent can be talked into breaking the written policy.",
+    "lede": "Agent Guard checks every account change before it runs."
+  },
+  "slot_empty": "When the agent tries an account change, the action slip stops here first. Nothing runs until the guard says so.",
+  "facts_title": "Facts from the records the agent saw",
+  "gate_waiting": "Waiting for an action",
+  "ledger_title": "Actions checked",
+  "ledger_empty": "Each action the guard checks lands here.",
+  "meters": {
+    "alone": "Wrong actions the agent tried",
+    "through": "Let through by the guard"
+  },
+  "currency": "USD",
   "score": {
-    "headline": "Of 112 GPT-4o account changes in tau-bench that broke Sierra's written policy, Banyan Sapling blocked 64 before they ran and let 0 through; the other 48 went to a person.",
+    "eyebrow": "Measured on tau-bench",
+    "headline": "0 of 57 real rule breaks got past the guard.",
+    "headline_accent": [
+      "0"
+    ],
     "rows": [
       {
-        "label": "GPT-4o account changes not in the answer key",
-        "value": "364"
+        "group": "The 57 rule breaks the booking system really ran",
+        "value": "0",
+        "label": "let through",
+        "sub": "31 by GPT-4o, 26 by Claude 3.5 Sonnet",
+        "accent": "red"
       },
       {
-        "label": "...that break a written rule",
-        "value": "112 · 64 blocked · 48 to a person · 0 through"
+        "group": "The 57 rule breaks the booking system really ran",
+        "value": "37",
+        "label": "blocked before they ran"
       },
       {
-        "label": "...that the booking system would have run",
-        "value": "31 · 21 blocked (26,898 USD) · 10 to a person · 0 through"
+        "group": "The 57 rule breaks the booking system really ran",
+        "value": "20",
+        "label": "sent to a person first",
+        "accent": "person"
       },
       {
-        "label": "All wrong GPT-4o changes",
-        "value": "364 · 69 blocked · 282 to a person · 13 through"
+        "group": "Against gpt-6-luna on the same 257 actions",
+        "value": "3",
+        "label": "of 100 other wrong actions let through",
+        "sub": "gpt-6-luna let 14 through",
+        "accent": "red"
       },
       {
-        "label": "Right GPT-4o changes (sample)",
-        "value": "188 · 12 allowed · 163 to a person · 13 blocked"
-      },
-      {
-        "label": "Both models, rule-breaking changes",
-        "value": "164 · 87 blocked · 77 to a person · 0 through"
-      },
-      {
-        "label": "Real Sapling calls",
-        "value": "558"
+        "group": "Against gpt-6-luna on the same 257 actions",
+        "value": "6",
+        "label": "of 100 right actions wrongly blocked",
+        "sub": "gpt-6-luna blocked 14",
+        "accent": "red"
       }
-    ]
+    ],
+    "caveat": "Fair to say: Sapling sends many cases to a person (87 of 100 right actions). gpt-6-luna blocked more rule breaks outright (54 against 37) and allowed more right work (46 against 7).",
+    "source": "Source: tau-bench (Sierra, MIT licence), GPT-4o and Claude 3.5 Sonnet as airline and retail agents, scored against the benchmark's own answer key. Every check by Banyan Sapling from Mubit; the general model is gpt-6-luna with the same input and the same guard rule."
   },
   "cases": [
     {
