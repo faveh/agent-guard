@@ -51,6 +51,36 @@ At 0.1 it stops 96 of 112 rule-breaking changes and blocks 23 of 188 right ones 
 
 Full per-action output (claim, evidence, Sapling's four probabilities, outcome) is in `results.json`.
 
+## Sapling vs a general model
+
+We gave a big general model, `gpt-6-luna` through the Mubit gateway, the exact input Sapling got for each action (the same policy passages, evidence lines and claim) and asked for the same four labels in JSON with a short reason. The same guard rule turns its label into block, allow or a person. The prompt is fixed in `judge_compare.py`. Sapling was not called again: its answers are the ones in `results.json`.
+
+`claude-haiku-4-5` and `gemini-3.8-flash` were refused: the Mubit starter credit serves only OpenAI models on this route (HTTP 400 `starter_credit_model`). So this is one general model against Sapling.
+
+To save the starter credit we sampled (seed 7): all 57 rule-breaking actions the booking system ran (31 GPT-4o, 26 Claude 3.5 Sonnet), 100 of the 338 right actions and 100 of the 607 other wrong actions. Sapling's first row is on its full set; the second row is Sapling on the same 257 actions as the model, so rows two and three are like for like.
+
+| Checker | Rule-breaking, system ran it: blocked / person / through | Right: blocked / allowed / person | Other wrong: blocked / person / through | Median time per check | Tokens |
+|---|---|---|---|---:|---:|
+| Sapling, full set (57 / 338 / 607) | 37 / 20 / **0** | 18 / 19 / 301 | 56 / 529 / 22 | about 1 s | none (own endpoint) |
+| Sapling, same sample (57 / 100 / 100) | 37 / 20 / **0** | **6** / 7 / 87 | 13 / 84 / **3** | about 1 s | none (own endpoint) |
+| gpt-6-luna, same sample (57 / 100 / 100) | **54** / 3 / **0** | 14 / **46** / 40 | **40** / 46 / 14 | 2.3 s | 117,971 for 191 distinct inputs |
+
+Where Sapling is worse:
+
+- **It blocks fewer rule breaks.** gpt-6-luna blocked 54 of the 57 the system ran; Sapling blocked 37. Neither let one through. All 20 that Sapling sent to a person, gpt-6-luna blocked (the basic economy flight changes, route changes and too many payment methods that Sapling found unclear).
+- **It lets far fewer right actions through.** gpt-6-luna allowed 46 of 100 right actions; Sapling allowed 7 and sent 87 to a person.
+- **It blocks fewer other wrong actions.** 40 of 100 for gpt-6-luna, 13 for Sapling.
+
+Where Sapling is better:
+
+- **It blocks fewer right actions.** 6 of 100 against 14. Only 3 of gpt-6-luna's 14 break a written rule by our check; others are misreadings, for example a cabin change it blocked because the fare difference was negative.
+- **It lets fewer wrong actions through.** 3 of 100 against 14 (5 returns, 4 bag changes, 3 address changes, one item change, one cancellation; none breaks a written rule).
+- **It is faster and costs no gateway tokens.** About 1 s against 2.3 s median, and gpt-6-luna used about 600 tokens per check.
+
+In short: on these inputs a general model is the stronger blocker and lets more right work through, at the price of more wrong blocks and more wrong actions let through. Sapling is the more cautious checker: it sends most hard cases to a person.
+
+Limits of this comparison: one general model, one fixed prompt, one run (no repeats, so no spread), and a sample of 257 out of 1,002. Identical inputs (the same action in another trial) were asked once and share the answer. Total paid: 196 gpt-6-luna calls and 120,341 tokens (5 inputs were paid twice in the first run before duplicate inputs were merged), plus 3 refused calls with no tokens. Per-action labels and reasons are in `judge_results.json`.
+
 ## How it works
 
 1. **Actions.** `taubench.py` walks each conversation in order, keeps what the agent has seen from its tool outputs (user profiles, orders, products, reservations, flight searches, identity checks), and stops at every call to an account-changing tool: 2,762 actions across the four files.
@@ -88,6 +118,8 @@ python3 tau-bench/download.py        # trajectories and policies into tau-bench/
 python3 tau-bench/run.py pilot       # 20 GPT-4o actions
 python3 tau-bench/run.py full        # writes tau-bench/results.json; cached answers in tau-bench/.cache/
 python3 tau-bench/story.py           # writes data/stories/taubench.json for the demo
+python3 tau-bench/judge_compare.py pilot  # 20 gpt-6-luna calls through Mubit, prints tokens per call
+python3 tau-bench/judge_compare.py full   # the sampled Sapling vs general model comparison, writes tau-bench/judge_results.json
 python3 -m pytest -q tau-bench/tests # no network, Sapling is faked
 ```
 
