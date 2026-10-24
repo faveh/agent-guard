@@ -456,6 +456,7 @@ function showScore(story) {
     <h2 class="sc-head">${esc(s.headline || "")}</h2>
     <div class="sc-rows" style="margin-top:28px">${rows}</div>
     <p class="sc-foot">${esc(story.source_note || "")} <b>Banyan Sapling checks one claim against the written policy and the record. Never the chat.</b></p>
+    <p class="credit big">Policy check by <b>Banyan Sapling</b> from <b>Mubit</b></p>
     <div class="sc-links"><button type="button" id="replay">Play again</button><a href="/">Try it yourself</a><a href="https://github.com/faveh/agent-guard">github.com/faveh/agent-guard</a></div>`;
   $("scorecard").hidden = false;
   $("replay").onclick = () => location.reload();

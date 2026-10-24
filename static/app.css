@@ -16,6 +16,10 @@
   --person: #ffb43c;
   --person-ink: #a35a00;
   --odd: #a991ff;
+  /* Mubit's own brand green (--brand-forest on mubit.ai). Only for the Banyan Sapling credit, never for a verdict. */
+  --mubit: #304c3d;
+  --mubit-edge: #567756;
+  --mubit-ink: #f6f8f2;
   --display: "Big Shoulders", "Arial Narrow", Impact, sans-serif;
   --stencil: "Big Shoulders Stencil", "Big Shoulders", Impact, sans-serif;
   --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -47,6 +51,16 @@ body {
 .mark span { color: var(--lamp); }
 .thesis { margin: 10px 0 0; max-width: 64ch; color: var(--fog); font-size: clamp(14px, 1vw, 17px); }
 .thesis b { color: var(--chalk); font-weight: 600; }
+/* the credit to Mubit, whose Banyan Sapling model makes every check */
+.credit {
+  display: inline-block; margin: 12px 0 0; padding: 5px 12px; border: 1px solid var(--mubit-edge); border-radius: 999px;
+  background: var(--mubit); color: var(--mubit-ink); font: 500 14px/1.2 var(--mono); letter-spacing: 0.04em;
+}
+.credit b { font-weight: 600; }
+.credit.big { margin-top: 28px; padding: 9px 20px; font-size: clamp(16px, 1.3vw, 24px); }
+.credit-tag {
+  padding: 2px 8px; border: 1px solid var(--mubit-edge); border-radius: 999px; background: var(--mubit); color: var(--mubit-ink);
+}
 .links { display: flex; gap: 18px; margin-top: 8px; font-size: 13px; }
 .links a { color: var(--lamp); text-decoration: none; border-bottom: 1px solid rgba(244, 213, 141, 0.35); }
 .links a:hover { border-bottom-color: var(--lamp); }
@@ -145,6 +159,7 @@ button[type="submit"]:disabled { opacity: 0.5; cursor: wait; }
 }
 
 /* the gate */
+.gate-col { border-top: 3px solid var(--mubit-edge); }
 .gate { flex: 1; overflow-y: auto; display: flex; flex-direction: column; min-height: 0; }
 .slot { padding: 14px 18px 8px; position: relative; display: flex; flex-direction: column; gap: 10px; }
 .slot-empty {
