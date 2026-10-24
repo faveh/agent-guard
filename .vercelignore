@@ -1,0 +1,11 @@
+# Never upload secrets or local state. The site runs without a Mubit key.
+.env
+.env.*
+!.env.example
+.venv/
+.cache/
+.pytest_cache/
+__pycache__/
+.claude/
+tests/
+mp-expense-check/

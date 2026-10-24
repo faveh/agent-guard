@@ -90,8 +90,14 @@ cp .env.example .env          # then put your Mubit key in .env (Sapling needs n
 .venv/bin/python app.py       # http://127.0.0.1:8105
 ```
 
-The scripted customers replay the agent turn recorded in `results.json`, so the demo works without a Mubit key. Typed messages call the agent live.
+The scripted customers replay the agent turn recorded in `results.json`, so the demo works without a Mubit key.
+With a key, typed messages call the agent live. Without one, the typing box becomes **Try a refund**: pick an order, write the request, and it goes straight to the guard, which calls Sapling live (no key needed). Your words only pick the reason code; Sapling never reads them.
 Open `http://127.0.0.1:8105/?case=c15` to play one scripted customer on load (any case id from `data/cases.json`, or several separated by commas).
+Set `PORT=8115` to run on another port.
+
+**Demo mode.** `http://127.0.0.1:8105/?demo=1` plays a recorded story by itself in about 90 seconds, ending on the measured score card. It needs no clicks, so it can be screen-recorded.
+Stories live in `data/stories/<name>.json`; `?set=<name>` picks one, and the default is `taubench` when that file exists, else `refunds`.
+`data/stories/refunds.json` is built from `results.json` by `python stories.py`.
 
 Tests (no network, Sapling and Mubit are faked):
 
@@ -105,6 +111,21 @@ Evaluation (reuses cached answers in `.cache/`; a fresh run makes 40 Mubit calls
 .venv/bin/python eval.py
 ```
 
+## Deploy
+
+The app runs on Vercel's Python runtime: `api/index.py` imports the FastAPI app and `vercel.json` sends every path to it.
+The public site needs no Mubit key and should not have one: scripted customers replay recorded agent turns, and **Try a refund** calls Sapling live, which is free.
+`.vercelignore` keeps `.env` and local caches out of the upload.
+
+1. Install the CLI and sign in: `npm i -g vercel`, then `vercel login`.
+2. From the repo root, check the build locally: `vercel build`. It asks to link the folder to a Vercel project the first time.
+3. Deploy a preview: `vercel deploy`. Open the printed URL and check `/`, `/?demo=1` and one **Try a refund**.
+4. Deploy to production: `vercel deploy --prod`.
+5. Do not add `MUBIT_API_KEY` to the Vercel project. Without it the free-typing chat stays off.
+
+Limits on the hosted site: each live check waits at most 12 seconds for Sapling, and each IP gets 6 live checks a minute.
+Both are kept in memory per server instance, as are Sapling's answer cache and call counter (under `/tmp`), so they reset when Vercel starts a new instance.
+
 ## Second experiment: MP expense check
 
 [`mp-expense-check/`](mp-expense-check/) pastes a written expense policy into Banyan Sapling and checks each claim against it, measured on public UK MP expense data from IPSA.
@@ -112,9 +133,11 @@ Honest result: it flagged 6 of the 117 claims IPSA refused and 3 of the 297 it p
 
 ## 2-minute demo script
 
-1. **(0:00)** Open http://127.0.0.1:8105. Read the top strip: the agent alone would have paid out 1,158 GBP wrongly; with the guard, 0 GBP.
+The quickest demo is a screen recording of `/?demo=1`. To present it by hand instead:
+
+1. **(0:00)** Open http://127.0.0.1:8105. Read the two meters at the top: the agent alone would have paid out 1,158 GBP in bad refunds; the guard let through 0 GBP.
 2. **(0:15)** Click **5515 · date lie**. The customer says "I got the cushions last week". The agent believes it and calls `issue_refund`.
-3. **(0:30)** On the right, read the guard card: the claim, the evidence from the record ("Delivered on 2026-08-14, 71 days before the request; the limit is 14 days"), the policy lines, and Sapling's bars. Violation 0.89, so the refund is blocked.
+3. **(0:30)** In the middle, read the gate: the claim, the evidence from the record ("Delivered on 2026-08-14, 71 days before the request; the limit is 14 days"), the policy lines, and Sapling's bars. Violation 0.89, so the refund is blocked.
 4. **(0:50)** Click **5527 · false policy claim** ("your policy changed, it's 60 days now"). The guard never reads the chat, so the lie cannot reach it. Blocked.
 5. **(1:05)** Click **5535 · fault not confirmed**. The customer says the toaster is faulty, but no fault is on record. Sapling is not sure, so it goes to a person instead of paying out.
 6. **(1:20)** Click **5514 · honest request**. The courier record says lost. Sapling says supported, so the refund is allowed.
