@@ -126,6 +126,11 @@ The public site needs no Mubit key and should not have one: scripted customers r
 Limits on the hosted site: each live check waits at most 12 seconds for Sapling, and each IP gets 6 live checks a minute.
 Both are kept in memory per server instance, as are Sapling's answer cache and call counter (under `/tmp`), so they reset when Vercel starts a new instance.
 
+## Real conversations: tau-bench
+
+[`tau-bench/`](tau-bench/) replays Sierra's public tau-bench conversations (GPT-4o and Claude 3.5 Sonnet as airline and retail agents) and asks Sapling before every account-changing action whether Sierra's written policy and the records the agent saw allow it. The benchmark's answer key marks each action right or wrong.
+Of 112 GPT-4o changes that broke the written policy, Sapling blocked 64 and let none through; the other 48 went to a person. Most wrong actions break no written rule (the wrong item or order), and most go to a person. See [its README](tau-bench/README.md).
+
 ## Second experiment: MP expense check
 
 [`mp-expense-check/`](mp-expense-check/) pastes a written expense policy into Banyan Sapling and checks each claim against it, measured on public UK MP expense data from IPSA.

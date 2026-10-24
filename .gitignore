@@ -7,3 +7,7 @@ __pycache__/
 
 # mp-expense-check: the downloaded IPSA CSV and Scheme PDF
 mp-expense-check/raw/
+
+# tau-bench: downloaded trajectories and the Sapling cache
+tau-bench/raw/
+tau-bench/.cache/
