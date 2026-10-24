@@ -4,7 +4,7 @@
 The agent wants to cancel a booking, issue a refund or swap an order. Before that happens, Sapling reads the policy and the facts from the real records, and the guard blocks it, allows it, or sends it to a person. It never reads the chat, so a customer cannot talk it round.
 
 - **Live demo:** https://agent-guard-beryl.vercel.app/
-- **Auto demo (90 s, no clicks):** https://agent-guard-beryl.vercel.app/?demo=1
+- **Auto demo (under 2 min, no clicks):** https://agent-guard-beryl.vercel.app/?demo=1
 
 ![Score card: Sapling on real tau-bench agent actions](docs/score-card.png)
 

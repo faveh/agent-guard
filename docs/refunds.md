@@ -80,7 +80,7 @@ Sapling calls run at most 4 at a time, back off on 429 and 5xx, are cached by in
 - The scripted customers replay the agent turn recorded in `results.json`, so the demo works without a Mubit key.
 - With `MUBIT_API_KEY` in `.env`, typed messages call the agent live. Without one, the typing box becomes **Try a refund**: pick an order, write the request, and it goes straight to the guard, which calls Sapling live (no key needed). Your words only pick the reason code; Sapling never reads them.
 - `http://127.0.0.1:8105/?case=c15` plays one scripted customer on load (any case id from `data/cases.json`, or several separated by commas).
-- `http://127.0.0.1:8105/?demo=1` plays a recorded story by itself in about 90 seconds, ending on the score card. Stories live in `data/stories/<name>.json`; `?set=<name>` picks one, and the default is `taubench` when that file exists, else `refunds`. `data/stories/refunds.json` is built from `results.json` by `python stories.py`.
+- `http://127.0.0.1:8105/?demo=1` plays a recorded story by itself in under 2 minutes, ending on the score card. Stories live in `data/stories/<name>.json`; `?set=<name>` picks one, and the default is `taubench` when that file exists, else `refunds`. `data/stories/refunds.json` is built from `results.json` by `python stories.py`.
 - `PORT=8115` runs on another port.
 - `.venv/bin/python eval.py` reruns the refund evaluation (reuses cached answers in `.cache/`; a fresh run makes 40 Mubit calls and up to 80 Sapling calls).
 
