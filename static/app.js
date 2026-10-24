@@ -171,7 +171,9 @@ async function runGate(c) {
   const top = c.sapling.raw_label;
   const topName = $("g-bars").querySelector(`.name[data-k="${top}"]`);
   if (topName) topName.classList.add("lead");
-  $("g-verdict").innerHTML = `Top score: <b>${esc(PROB[top] || top)} ${(p[top] || 0).toFixed(2)}</b>. Rule: block on violation or inconsistent, allow on supported, else a person.${c.note ? " " + esc(c.note) : ""}`;
+  const topNum = $("g-bars").querySelector(`.num[data-k="${top}"]`);
+  if (topNum) topNum.classList.add("lead");
+  $("g-verdict").innerHTML = `Top score: <b class="p-${esc(top)}">${esc(PROB[top] || top)} ${(p[top] || 0).toFixed(2)}</b>. Rule: block on violation or inconsistent, allow on supported, else a person.${c.note ? " " + esc(c.note) : ""}`;
 
   const stamp = $("stamp");
   stamp.textContent = STAMP[c.outcome];
@@ -401,7 +403,8 @@ async function demo() {
   const set = params.get("set");
   const story = await getJSON("/api/story" + (set ? `?set=${encodeURIComponent(set)}` : ""));
   const cases = story.cases.filter((c) => c.action && c.sapling && c.outcome);
-  currency = (cases.find((c) => c.amount) || { amount: { currency: "GBP" } }).amount.currency;
+  currency = story.currency || (cases.find((c) => c.amount) || { amount: { currency: "GBP" } }).amount.currency;
+  useStoryWords(story);
   $("m-alone").textContent = money(0, currency);
   $("m-through").textContent = money(0, currency);
   $("meters-eyebrow").textContent = "Running total in this demo";
@@ -412,6 +415,10 @@ async function demo() {
   pace *= 14.5 / Math.min(15, Math.max(9, 84 / Math.max(cases.length, 1)));
 
   const intro = $("intro");
+  if (story.intro) {
+    $("intro-head").textContent = story.intro.headline || $("intro-head").textContent;
+    $("intro-lede").textContent = story.intro.lede || $("intro-lede").textContent;
+  }
   intro.querySelector(".eyebrow").textContent = story.title || "Banyan Sapling policy challenge";
   intro.hidden = false;
   await wait(4600);
@@ -448,14 +455,54 @@ async function demo() {
   showScore(story);
 }
 
+// The page's own words are about Quillmoor refunds. A story can replace them with its own (tau-bench: account changes).
+function useStoryWords(story) {
+  const set = (id, text) => { if (text) $(id).textContent = text; };
+  set("shop-label", story.shop_label);
+  set("facts-title", story.facts_title);
+  set("slot-empty", story.slot_empty);
+  set("ledger-title", story.ledger_title);
+  set("ledger-empty", story.ledger_empty);
+  if (story.ledger_title) $("ledger-col").setAttribute("aria-label", story.ledger_title);
+  if (story.thesis) $("thesis").innerHTML = `${esc(story.thesis)} <b>Never the chat.</b>`;
+  if (story.meters) { set("m-alone-label", story.meters.alone); set("m-through-label", story.meters.through); }
+  if (story.gate_waiting) status(story.gate_waiting);
+}
+
+// Wrap the first match of each accent phrase in the headline so the key number shows in Mubit red.
+function accented(text, parts = []) {
+  let html = esc(text);
+  for (const part of parts) {
+    const p = esc(part), at = html.indexOf(p);
+    if (at >= 0) html = `${html.slice(0, at)}<em class="hl">${p}</em>${html.slice(at + p.length)}`;
+  }
+  return html;
+}
+
 function showScore(story) {
   const s = story.score || {};
-  const rows = (s.rows || []).map((r, i) => `<div class="sc-row" style="animation-delay:${i * 120}ms"><div class="v">${esc(r.value)}</div><div class="k">${esc(r.label)}</div></div>`).join("");
+  const groups = [];
+  for (const r of s.rows || []) {
+    if (!groups.length || groups[groups.length - 1].name !== (r.group || "")) groups.push({ name: r.group || "", rows: [] });
+    groups[groups.length - 1].rows.push(r);
+  }
+  let n = 0;
+  const cell = (r) => `<div class="sc-row${r.accent ? " a-" + esc(r.accent) : ""}" style="animation-delay:${n++ * 120}ms">
+      <div class="v">${esc(r.value)}</div><div class="k">${esc(r.label)}</div>${r.sub ? `<div class="s">${esc(r.sub)}</div>` : ""}</div>`;
+  const blocks = groups.map((g) => {
+    const cols = Math.min(g.rows.length, 3);
+    return `<section class="sc-group" style="flex:${cols};--cols:${cols}">
+      ${g.name ? `<h3 class="sc-group-name">${esc(g.name)}</h3>` : ""}<div class="sc-rows">${g.rows.map(cell).join("")}</div></section>`;
+  }).join("");
+  const foot = s.source
+    ? `<p class="sc-foot">${esc(s.source)}</p>`
+    : `<p class="sc-foot">${esc(story.source_note || "")} <b>Banyan Sapling checks one claim against the written policy and the record. Never the chat.</b></p>`;
   $("sc-inner").innerHTML = `
-    <p class="eyebrow">Measured result</p>
-    <h2 class="sc-head">${esc(s.headline || "")}</h2>
-    <div class="sc-rows" style="margin-top:28px">${rows}</div>
-    <p class="sc-foot">${esc(story.source_note || "")} <b>Banyan Sapling checks one claim against the written policy and the record. Never the chat.</b></p>
+    <p class="eyebrow">${esc(s.eyebrow || "Measured result")}</p>
+    <h2 class="sc-head">${accented(s.headline || "", s.headline_accent)}</h2>
+    <div class="sc-groups">${blocks}</div>
+    ${s.caveat ? `<p class="sc-caveat">${esc(s.caveat)}</p>` : ""}
+    ${foot}
     <p class="credit big">Policy check by <b>Banyan Sapling</b> from <b>Mubit</b></p>
     <div class="sc-links"><button type="button" id="replay">Play again</button><a href="/">Try it yourself</a><a href="https://github.com/faveh/agent-guard">github.com/faveh/agent-guard</a></div>`;
   $("scorecard").hidden = false;

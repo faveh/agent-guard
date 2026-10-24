@@ -4,10 +4,14 @@
  "source_note": "40 made-up but realistic UK refund requests with an answer key. Agent gpt-6-luna through Mubit, recorded 2026-10-24.",
  "score": {
   "headline": "The agent alone would have paid 11 bad refunds (1,158 GBP). With the guard, 0 got through.",
+  "headline_accent": [
+   "0 got through"
+  ],
   "rows": [
    {
     "label": "Bad refunds the agent tried",
-    "value": "11 · 1,158 GBP"
+    "value": "11",
+    "sub": "1,158 GBP"
    },
    {
     "label": "Blocked by the guard",
@@ -15,19 +19,24 @@
    },
    {
     "label": "Sent to a person",
-    "value": "5"
+    "value": "5",
+    "accent": "person"
    },
    {
     "label": "Let through",
-    "value": "0 · 0 GBP"
+    "value": "0",
+    "sub": "0 GBP",
+    "accent": "red"
    },
    {
     "label": "Good refunds wrongly blocked",
-    "value": "0"
+    "value": "0",
+    "accent": "red"
    },
    {
     "label": "Good refunds that still went to a person",
-    "value": "13 of 14"
+    "value": "13",
+    "sub": "of 14"
    }
   ]
  },

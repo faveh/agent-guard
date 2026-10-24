@@ -9,6 +9,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 import run  # noqa: E402
+import story  # noqa: E402
 import taubench as tb  # noqa: E402
 
 RES = {
@@ -260,3 +261,18 @@ def test_select_is_fixed_by_seed():
     plan = {("gpt-4o", "retail", "wrong"): 10}
     assert [a["i"] for a in run.select(acts, plan)] == [a["i"] for a in run.select(acts, plan)]
     assert len(run.select(acts, {("gpt-4o", "retail", "wrong"): None})) == 50
+
+
+def test_story_score_card_matches_the_results_files():
+    results, judge = story.load_results()
+    page = json.loads(story.OUT.read_text())
+    assert page["score"] == story.build_score(results, judge)
+    ran = results["score"]["overall"]["rule_breaking_api_accepted"]
+    sap, luna = judge["checkers"]["sapling (same sample)"], judge["checkers"]["gpt-6-luna"]
+    values = [r["value"] for r in page["score"]["rows"]]
+    assert values == [str(ran["allowed"]), str(ran["blocked"]), str(ran["person"]), str(sap["wrong_other"]["allowed"]), str(sap["right"]["blocked"])]
+    assert f"gpt-6-luna let {luna['wrong_other']['allowed']} through" in page["score"]["rows"][3]["sub"]
+    assert f"gpt-6-luna blocked {luna['right']['blocked']}" in page["score"]["rows"][4]["sub"]
+    assert page["score"]["headline"].startswith(f"{ran['allowed']} of {ran['n']} ")
+    words = json.dumps({k: v for k, v in page.items() if k != "cases"}).lower()
+    assert "made-up" not in words and "made up" not in words and "quillmoor" not in words

@@ -1,6 +1,8 @@
-"""Write data/stories/taubench.json: six real tau-bench actions for the demo, with the score block from results.json.
+"""Write data/stories/taubench.json: six real tau-bench actions for the demo, the page words for this set,
+and the score card from results.json and judge_results.json.
 
-  python tau-bench/story.py
+  python tau-bench/story.py               # needs tau-bench/raw (python tau-bench/download.py)
+  python tau-bench/story.py --keep-cases  # keeps the cases already in the file, rewrites the rest
 """
 
 import json
@@ -50,7 +52,7 @@ def _plain(claim):
     return text[0].upper() + text[1:]
 
 
-def build(results, actions):
+def build_cases(results, actions):
     by_id = {a["id"]: a for a in actions}
     scored = {a["id"]: a for a in results["actions"]}
     cases = []
@@ -74,43 +76,101 @@ def build(results, actions):
                 "truth_note": note,
             }
         )
-    g = results["score"]["gpt-4o"]
-    o = results["score"]["overall"]
-    pop = results["population"]
-    rb, rba, w, r = g["rule_breaking"], g["rule_breaking_api_accepted"], g["wrong"], g["right"]
-    wrong_n = pop["gpt-4o/airline"]["wrong"] + pop["gpt-4o/retail"]["wrong"]
+    return cases
+
+
+def build(results, judge, cases):
     return {
         "set": "taubench",
         "title": "Banyan Sapling checks a real AI support agent's account changes before they run",
-        "source_note": "Real public conversations from tau-bench (Sierra, MIT licence): GPT-4o and Claude 3.5 Sonnet as airline and retail agents, with the benchmark's own answer key.",
-        "score": {
-            "headline": (
-                f"Of {rb['n']} GPT-4o account changes in tau-bench that broke Sierra's written policy, "
-                f"Banyan Sapling blocked {rb['blocked']} before they ran and let {rb['allowed']} through; the other {rb['person']} went to a person."
-            ),
-            "rows": [
-                {"label": "GPT-4o account changes not in the answer key", "value": f"{wrong_n}"},
-                {"label": "...that break a written rule", "value": f"{rb['n']} · {rb['blocked']} blocked · {rb['person']} to a person · {rb['allowed']} through"},
-                {
-                    "label": "...that the booking system would have run",
-                    "value": f"{rba['n']} · {rba['blocked']} blocked ({rba['value_usd']['blocked']:,.0f} USD) · {rba['person']} to a person · {rba['allowed']} through",
-                },
-                {"label": "All wrong GPT-4o changes", "value": f"{w['n']} · {w['blocked']} blocked · {w['person']} to a person · {w['allowed']} through"},
-                {"label": "Right GPT-4o changes (sample)", "value": f"{r['n']} · {r['allowed']} allowed · {r['person']} to a person · {r['blocked']} blocked"},
-                {
-                    "label": "Both models, rule-breaking changes",
-                    "value": f"{o['rule_breaking']['n']} · {o['rule_breaking']['blocked']} blocked · {o['rule_breaking']['person']} to a person · {o['rule_breaking']['allowed']} through",
-                },
-                {"label": "Real Sapling calls", "value": f"{results['sapling_calls_used']}"},
-            ],
-        },
+        "source_note": SOURCE_NOTE,
+        **LABELS,
+        "score": build_score(results, judge),
         "cases": cases,
     }
 
 
-def main():
-    results = json.loads((HERE / "results.json").read_text())
-    story = build(results, tb.all_actions())
+SOURCE_NOTE = "Real public conversations from tau-bench (Sierra, MIT licence): GPT-4o and Claude 3.5 Sonnet as airline and retail agents, with the benchmark's own answer key."
+# Page words for this set. The page falls back to its own Quillmoor refund wording for any that are missing.
+LABELS = {
+    "shop_label": "tau-bench airline and retail desks (Sierra, public benchmark)",
+    "thesis": "An AI support agent can be talked into the wrong account change. Before any change runs, Banyan Sapling checks it against the written policy and the records the agent saw.",
+    "intro": {
+        "headline": "An AI support agent can be talked into breaking the written policy.",
+        "lede": "Agent Guard checks every account change before it runs.",
+    },
+    "slot_empty": "When the agent tries an account change, the action slip stops here first. Nothing runs until the guard says so.",
+    "facts_title": "Facts from the records the agent saw",
+    "gate_waiting": "Waiting for an action",
+    "ledger_title": "Actions checked",
+    "ledger_empty": "Each action the guard checks lands here.",
+    "meters": {"alone": "Wrong actions the agent tried", "through": "Let through by the guard"},
+    "currency": "USD",
+}
+
+
+def build_score(results, judge):
+    """The score card: every number comes from results.json (all actions) and judge_results.json (Sapling vs gpt-6-luna)."""
+    ran = results["score"]["overall"]["rule_breaking_api_accepted"]
+    by_model = {m: results["score"][m]["rule_breaking_api_accepted"]["n"] for m in tb.MODELS}
+    sap, luna = judge["checkers"]["sapling (same sample)"], judge["checkers"]["gpt-6-luna"]
+    sample = sum(sap[g]["n"] for g in ("rule_breaking_ran", "right", "wrong_other"))
+    right, other = sap["right"]["n"], sap["wrong_other"]["n"]
+    ran_group = f"The {ran['n']} rule breaks the booking system really ran"
+    vs_group = f"Against gpt-6-luna on the same {sample} actions"
+    return {
+        "eyebrow": "Measured on tau-bench",
+        "headline": f"{ran['allowed']} of {ran['n']} real rule breaks got past the guard.",
+        "headline_accent": [f"{ran['allowed']}"],
+        "rows": [
+            {
+                "group": ran_group,
+                "value": f"{ran['allowed']}",
+                "label": "let through",
+                "sub": f"{by_model['gpt-4o']} by GPT-4o, {by_model['sonnet-35-new']} by Claude 3.5 Sonnet",
+                "accent": "red",
+            },
+            {"group": ran_group, "value": f"{ran['blocked']}", "label": "blocked before they ran"},
+            {"group": ran_group, "value": f"{ran['person']}", "label": "sent to a person first", "accent": "person"},
+            {
+                "group": vs_group,
+                "value": f"{sap['wrong_other']['allowed']}",
+                "label": f"of {other} other wrong actions let through",
+                "sub": f"gpt-6-luna let {luna['wrong_other']['allowed']} through",
+                "accent": "red",
+            },
+            {
+                "group": vs_group,
+                "value": f"{sap['right']['blocked']}",
+                "label": f"of {right} right actions wrongly blocked",
+                "sub": f"gpt-6-luna blocked {luna['right']['blocked']}",
+                "accent": "red",
+            },
+        ],
+        "caveat": (
+            f"Fair to say: Sapling sends many cases to a person ({sap['right']['person']} of {right} right actions). "
+            f"gpt-6-luna blocked more rule breaks outright ({luna['rule_breaking_ran']['blocked']} against {sap['rule_breaking_ran']['blocked']}) "
+            f"and allowed more right work ({luna['right']['allowed']} against {sap['right']['allowed']})."
+        ),
+        "source": (
+            "Source: tau-bench (Sierra, MIT licence), GPT-4o and Claude 3.5 Sonnet as airline and retail agents, scored against the benchmark's own answer key. "
+            "Every check by Banyan Sapling from Mubit; the general model is gpt-6-luna with the same input and the same guard rule."
+        ),
+    }
+
+
+def load_results():
+    return json.loads((HERE / "results.json").read_text()), json.loads((HERE / "judge_results.json").read_text())
+
+
+def main(argv):
+    results, judge = load_results()
+    if "--keep-cases" in argv:
+        # No downloaded trajectories needed: rewrite the score and page words, keep the six cases already in the file.
+        cases = json.loads(OUT.read_text())["cases"]
+    else:
+        cases = build_cases(results, tb.all_actions())
+    story = build(results, judge, cases)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(story, indent=2, ensure_ascii=False) + "\n")
     print(f"wrote {OUT} with {len(story['cases'])} cases")
@@ -119,4 +179,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

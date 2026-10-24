@@ -18,7 +18,7 @@
   <div class="brand">
     <h1 class="mark">Agent <span>Guard</span></h1>
     <p class="credit">Policy check by <b>Banyan Sapling</b> from <b>Mubit</b></p>
-    <p class="thesis">An AI support agent can be talked into the wrong refund. Before any refund runs, Banyan Sapling checks it against the written policy and the order record. <b>Never the chat.</b></p>
+    <p class="thesis" id="thesis">An AI support agent can be talked into the wrong refund. Before any refund runs, Banyan Sapling checks it against the written policy and the order record. <b>Never the chat.</b></p>
     <nav class="links" id="links">
       <a href="/?demo=1">Play the 90-second demo</a>
       <a href="https://github.com/faveh/agent-guard">Code and method</a>
@@ -27,12 +27,12 @@
   <div class="meters">
     <p class="meters-eyebrow" id="meters-eyebrow">Measured on 40 made-up UK refund requests</p>
     <div class="meter alone">
-      <div class="m-label">Agent alone would have paid out</div>
+      <div class="m-label" id="m-alone-label">Agent alone would have paid out</div>
       <div class="m-value" id="m-alone">£0</div>
       <div class="m-sub" id="m-alone-sub">in bad refunds</div>
     </div>
     <div class="meter through">
-      <div class="m-label">Let through by the guard</div>
+      <div class="m-label" id="m-through-label">Let through by the guard</div>
       <div class="m-value" id="m-through">£0</div>
       <div class="m-sub" id="m-through-sub">in bad refunds</div>
     </div>
@@ -41,7 +41,7 @@
 
 <main class="stage">
   <section class="col chat-col" aria-label="Support chat">
-    <div class="col-head"><span>Support chat</span><span class="dim">Quillmoor, a made-up UK shop</span></div>
+    <div class="col-head"><span>Support chat</span><span class="dim" id="shop-label">Quillmoor, a made-up UK shop</span></div>
     <div class="picker" id="picker" aria-label="Scripted customers"></div>
     <div class="chat" id="chat" aria-live="polite"></div>
     <form class="try" id="try" hidden>
@@ -89,7 +89,7 @@
         <div class="pane left">
           <h3>The claim Sapling checks</h3>
           <p class="claim" id="g-claim"></p>
-          <h3>Facts from the order record</h3>
+          <h3 id="facts-title">Facts from the order record</h3>
           <ul class="facts" id="g-facts"></ul>
         </div>
         <div class="pane right">
@@ -104,17 +104,17 @@
     </div>
   </section>
 
-  <section class="col ledger-col" aria-label="Refunds checked">
-    <div class="col-head"><span>Refunds checked</span><span class="dim" id="ledger-count"></span></div>
-    <ol class="ledger" id="ledger"><li class="ledger-empty">Each refund the guard checks lands here.</li></ol>
+  <section class="col ledger-col" id="ledger-col" aria-label="Refunds checked">
+    <div class="col-head"><span id="ledger-title">Refunds checked</span><span class="dim" id="ledger-count"></span></div>
+    <ol class="ledger" id="ledger"><li class="ledger-empty" id="ledger-empty">Each refund the guard checks lands here.</li></ol>
   </section>
 </main>
 
 <div class="overlay intro" id="intro" hidden>
   <div class="intro-inner">
     <p class="eyebrow">Banyan Sapling policy challenge</p>
-    <h2>A customer can talk an AI support agent into a refund.</h2>
-    <p class="lede">Agent Guard puts a gate between the agent and the money.</p>
+    <h2 id="intro-head">A customer can talk an AI support agent into a refund.</h2>
+    <p class="lede" id="intro-lede">Agent Guard puts a gate between the agent and the money.</p>
     <p class="credit big">Policy check by <b>Banyan Sapling</b> from <b>Mubit</b></p>
   </div>
 </div>
