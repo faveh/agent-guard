@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agent Guard</title>
+<style>
+  :root {
+    --bg: #f5f4f0; --panel: #ffffff; --ink: #1d1f23; --muted: #5d6470; --line: #e3e1da;
+    --allow: #1f7a4d; --allow-bg: #e3f3ea; --block: #b3261e; --block-bg: #fbe7e5;
+    --person: #9a5b00; --person-bg: #fdf0d9; --accent: #2f4fb3; --bar: #d9dce3;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 14px/1.45 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding: 14px 20px 10px; display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+  header h1 { margin: 0; font-size: 20px; letter-spacing: -0.01em; }
+  header p { margin: 0; color: var(--muted); }
+  .score { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; padding: 0 20px 12px; }
+  .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .tile .k { color: var(--muted); font-size: 12px; }
+  .tile .v { font-size: 22px; font-weight: 650; margin-top: 2px; }
+  .tile .s { color: var(--muted); font-size: 12px; }
+  .tile.bad .v { color: var(--block); } .tile.good .v { color: var(--allow); }
+  main { display: grid; grid-template-columns: minmax(340px, 5fr) 7fr; gap: 12px; padding: 0 20px 20px; height: calc(100vh - 150px); min-height: 560px; }
+  section { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; display: flex; flex-direction: column; min-height: 0; }
+  section > h2 { margin: 0; padding: 10px 14px; font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); border-bottom: 1px solid var(--line); }
+  .customers { display: flex; flex-wrap: wrap; gap: 6px; padding: 10px 14px; border-bottom: 1px solid var(--line); }
+  .customers button { border: 1px solid var(--line); background: #fafaf7; border-radius: 999px; padding: 4px 10px; font: inherit; font-size: 12px; cursor: pointer; }
+  .customers button:hover { border-color: var(--accent); color: var(--accent); }
+  .chat { flex: 1; overflow-y: auto; padding: 12px 14px; display: flex; flex-direction: column; gap: 8px; }
+  .msg { max-width: 88%; padding: 8px 11px; border-radius: 12px; white-space: pre-wrap; }
+  .msg.user { align-self: flex-end; background: #e8ecf8; border-bottom-right-radius: 3px; }
+  .msg.agent { align-self: flex-start; background: #f1f0eb; border-bottom-left-radius: 3px; }
+  .msg .meta { display: block; font-size: 11px; color: var(--muted); margin-bottom: 3px; }
+  .tool { align-self: flex-start; font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; background: #fff; border: 1px dashed var(--muted); border-radius: 8px; padding: 5px 9px; }
+  .compose { display: flex; gap: 8px; padding: 10px 14px; border-top: 1px solid var(--line); }
+  .compose input { flex: 1; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; font: inherit; }
+  .compose button { padding: 8px 14px; border: 0; border-radius: 8px; background: var(--accent); color: #fff; font: inherit; cursor: pointer; }
+  .compose button.ghost { background: transparent; color: var(--muted); border: 1px solid var(--line); }
+  .checks { flex: 1; overflow-y: auto; padding: 12px 14px; display: flex; flex-direction: column; gap: 12px; }
+  .empty { color: var(--muted); padding: 30px 10px; text-align: center; }
+  .card { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; border-left-width: 5px; }
+  .card.allow { border-left-color: var(--allow); } .card.block { border-left-color: var(--block); } .card.person { border-left-color: var(--person); }
+  .card .top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+  .badge { font-weight: 700; font-size: 12px; letter-spacing: .05em; padding: 3px 9px; border-radius: 6px; }
+  .badge.allow { background: var(--allow-bg); color: var(--allow); } .badge.block { background: var(--block-bg); color: var(--block); } .badge.person { background: var(--person-bg); color: var(--person); }
+  .card .what { font-weight: 600; }
+  .card .src { margin-left: auto; color: var(--muted); font-size: 12px; }
+  .card h3 { margin: 10px 0 4px; font-size: 11px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+  .claim { font-style: italic; }
+  .card ul { margin: 0; padding-left: 18px; }
+  .card li { margin: 1px 0; }
+  .rule { font-size: 13px; margin: 2px 0; }
+  .rule b { color: var(--accent); }
+  .bars { display: grid; grid-template-columns: 170px 1fr 44px; gap: 4px 10px; align-items: center; }
+  .bars .track { background: var(--bar); height: 10px; border-radius: 5px; overflow: hidden; }
+  .bars .fill { height: 100%; border-radius: 5px; background: #8a93a6; }
+  .bars .fill.supported { background: var(--allow); } .bars .fill.violation { background: var(--block); }
+  .bars .fill.insufficient_information { background: var(--person); } .bars .fill.inconsistent_context { background: #6b4fb3; }
+  .bars .num { font-variant-numeric: tabular-nums; text-align: right; font-size: 12px; }
+  .why { margin-top: 8px; font-size: 12px; color: var(--muted); }
+  .err { color: var(--block); font-size: 12px; }
+  @media (max-width: 900px) {
+    .score { grid-template-columns: 1fr 1fr; padding: 0 16px 12px; }
+    main { grid-template-columns: 1fr; height: auto; padding: 0 16px 16px; }
+    section { min-height: 420px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Agent Guard</h1>
+  <p>Before an AI support agent's refund runs, Banyan Sapling checks it against the refund policy and the order record. Never the chat.</p>
+</header>
+<div class="score" id="score"></div>
+<main>
+  <section>
+    <h2>Support chat · Quillmoor (made-up shop)</h2>
+    <div class="customers" id="customers"></div>
+    <div class="chat" id="chat"></div>
+    <form class="compose" id="compose">
+      <input id="input" placeholder="Type as the customer, e.g. Refund order 5513 please, £64" autocomplete="off">
+      <button type="submit">Send</button>
+      <button type="button" class="ghost" id="reset">New chat</button>
+    </form>
+  </section>
+  <section>
+    <h2>Guard · every refund the agent tries</h2>
+    <div class="checks" id="checks"><div class="empty">Pick a customer on the left. Each refund the agent tries shows up here with Sapling's check.</div></div>
+  </section>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const LABEL = { allow: "ALLOWED", block: "BLOCKED", person: "SENT TO A PERSON" };
+const PROB_NAMES = { supported: "supported", violation: "violation", insufficient_information: "insufficient information", inconsistent_context: "inconsistent context" };
+const REASON = { change_of_mind: "change of mind", faulty: "faulty item", not_delivered: "did not arrive" };
+let history = [];
+let caseId = null;
+
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const gbp = (n) => "£" + Number(n).toLocaleString("en-GB", { minimumFractionDigits: 0, maximumFractionDigits: 2 });
+
+function tile(cls, k, v, s) {
+  return `<div class="tile ${cls}"><div class="k">${esc(k)}</div><div class="v">${esc(v)}</div><div class="s">${esc(s)}</div></div>`;
+}
+
+function renderScore(score) {
+  const a = score && score.agent_vs_guard, g = score && score.guard_only;
+  if (!a || !g) { $("score").innerHTML = tile("", "Score", "–", "Run eval.py to fill this in"); return; }
+  $("score").innerHTML = [
+    tile("bad", "Agent alone would have paid out wrongly", gbp(a.bad_refunds_gbp), `${a.bad_refunds_tried} bad refunds out of ${a.refunds_tried} it tried`),
+    tile("good", "With the guard, paid out wrongly", gbp(a.bad_allowed_gbp), `${a.bad_blocked} blocked · ${a.bad_to_person} sent to a person · ${a.bad_allowed} missed`),
+    tile("", "Good refunds the agent tried", `${a.good_allowed} of ${a.good_refunds_tried} allowed`, `${a.good_to_person} sent to a person · ${a.good_blocked} wrongly blocked`),
+    tile("", `Guard alone on all ${g.cases} requests`, `${g.stopped}/${g.should_not_pay} bad stopped`, `${g.good_allowed}/${g.should_pay} good allowed · ${g.good_to_person} to a person · ${g.good_blocked} wrong blocks`),
+  ].join("");
+}
+
+function addMsg(role, text, meta) {
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  div.innerHTML = (meta ? `<span class="meta">${esc(meta)}</span>` : "") + esc(text);
+  $("chat").appendChild(div);
+  $("chat").scrollTop = $("chat").scrollHeight;
+  return div;
+}
+
+function addTool(attempt) {
+  const div = document.createElement("div");
+  div.className = "tool";
+  div.textContent = `agent calls issue_refund(order_id="${attempt.order_id}", amount_gbp=${attempt.amount_gbp}, reason="${attempt.reason}")`;
+  $("chat").appendChild(div);
+}
+
+function card(g, source) {
+  const p = g.sapling.probabilities;
+  const bars = Object.keys(PROB_NAMES).map((k) => `
+    <div>${PROB_NAMES[k]}</div>
+    <div class="track"><div class="fill ${k}" style="width:${Math.round(p[k] * 100)}%"></div></div>
+    <div class="num">${p[k].toFixed(2)}</div>`).join("");
+  const facts = (g.facts || [g.evidence]).map((f) => `<li>${esc(f)}</li>`).join("");
+  const rules = g.rules.map((r) => `<div class="rule"><b>${esc(r.id)}</b> ${esc(r.text.replace(/^R\d+\.\s*/, ""))}</div>`).join("");
+  const el = document.createElement("div");
+  el.className = "card " + g.outcome;
+  el.innerHTML = `
+    <div class="top">
+      <span class="badge ${g.outcome}">${LABEL[g.outcome]}</span>
+      <span class="what">Order ${esc(g.order_id)} · ${gbp(g.amount_gbp)} · ${REASON[g.reason] || g.reason}</span>
+      <span class="src">Sapling ${g.sapling.model_ms ? g.sapling.model_ms + " ms" : ""}${g.sapling.cached ? " · cached" : ""}${source === "recorded" ? " · agent turn recorded" : ""}</span>
+    </div>
+    <h3>Claim the guard built</h3><div class="claim">“${esc(g.claim)}”</div>
+    <h3>Evidence from the order record</h3><ul>${facts}</ul>
+    <h3>Policy lines checked</h3>${rules}
+    <h3>Sapling's scores</h3><div class="bars">${bars}</div>
+    <div class="why">Sapling's top label is <b>${esc(PROB_NAMES[g.sapling.raw_label])}</b>, so the refund is ${LABEL[g.outcome].toLowerCase()}. Rule: block on violation or inconsistent context, allow on supported, otherwise a person checks.${g.note ? " " + esc(g.note) : ""}</div>`;
+  const checks = $("checks");
+  const empty = checks.querySelector(".empty");
+  if (empty) empty.remove();
+  checks.prepend(el);
+}
+
+async function send(text) {
+  history.push({ role: "user", content: text });
+  addMsg("user", text, "Customer");
+  const pending = addMsg("agent", "…", "Support agent");
+  try {
+    const res = await fetch("/api/chat", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ messages: history, case_id: caseId }) });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.detail || res.statusText);
+    pending.remove();
+    if (data.attempt) addTool(data.attempt);
+    const tag = data.guard ? ` · refund ${LABEL[data.guard.outcome].toLowerCase()}` : "";
+    addMsg("agent", data.reply || "(no reply)", "Support agent" + tag);
+    history.push({ role: "assistant", content: data.reply || "" });
+    if (data.guard) card(data.guard, data.source);
+  } catch (err) {
+    pending.innerHTML = `<span class="err">${esc(err.message)}</span>`;
+    history.pop();
+  }
+}
+
+function reset() {
+  history = []; caseId = null; $("chat").innerHTML = "";
+}
+
+async function runCase(c) {
+  reset();
+  caseId = c.case_id;
+  await send(c.message);
+}
+
+async function init() {
+  const meta = await (await fetch("/api/meta")).json();
+  renderScore(meta.score);
+  const byId = {};
+  meta.customers.forEach((c) => {
+    byId[c.case_id] = c;
+    const b = document.createElement("button");
+    b.textContent = `${c.order_id} · ${c.tactic === "none" ? "honest request" : c.tactic}`;
+    b.title = c.message;
+    b.onclick = () => runCase(c);
+    $("customers").appendChild(b);
+  });
+  $("compose").onsubmit = (e) => { e.preventDefault(); const t = $("input").value.trim(); if (t) { $("input").value = ""; caseId = null; send(t); } };
+  $("reset").onclick = reset;
+  // ?case=c15 or ?case=c27,c15 plays scripted customers on load (used for headless screenshots).
+  const wanted = (new URLSearchParams(location.search).get("case") || "").split(",").filter(Boolean);
+  for (const id of wanted) {
+    const c = byId[id] || (await fetch(`/api/case/${id}`).then((r) => (r.ok ? r.json() : null)));
+    if (c) await runCase(c);
+  }
+}
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "UK MPs' business costs (IPSA)",
+  "measured": true,
+  "claimant": "An MP",
+  "claim_sentence": "This expense claim can be paid under the IPSA Scheme.",
+  "summary": "Real 2024-25 claims and IPSA's own decisions, checked against the real IPSA rulebook.",
+  "data_note": "Contains public sector information published by IPSA (theipsa.org.uk), licensed under the Open Government Licence v3.0. Names, constituencies, parliamentary ids and claim numbers removed."
+}

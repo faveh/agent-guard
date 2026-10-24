@@ -1,0 +1,3246 @@
+{
+ "pack": "ipsa",
+ "rule": "flag for review when Sapling's raw_label is 'violation'",
+ "headline": {
+  "refused": 117,
+  "paid": 297,
+  "flagged_refused": 6,
+  "flagged_paid": 3,
+  "recall": 0.0513,
+  "false_flag_rate": 0.0101,
+  "precision": 0.6667
+ },
+ "threshold_sweep": [
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 23,
+   "flagged_paid": 53,
+   "recall": 0.1966,
+   "false_flag_rate": 0.1785,
+   "precision": 0.3026,
+   "threshold": 0.1
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 11,
+   "flagged_paid": 11,
+   "recall": 0.094,
+   "false_flag_rate": 0.037,
+   "precision": 0.5,
+   "threshold": 0.15
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 10,
+   "flagged_paid": 8,
+   "recall": 0.0855,
+   "false_flag_rate": 0.0269,
+   "precision": 0.5556,
+   "threshold": 0.2
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 8,
+   "flagged_paid": 5,
+   "recall": 0.0684,
+   "false_flag_rate": 0.0168,
+   "precision": 0.6154,
+   "threshold": 0.3
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 8,
+   "flagged_paid": 4,
+   "recall": 0.0684,
+   "false_flag_rate": 0.0135,
+   "precision": 0.6667,
+   "threshold": 0.4
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 5,
+   "flagged_paid": 2,
+   "recall": 0.0427,
+   "false_flag_rate": 0.0067,
+   "precision": 0.7143,
+   "threshold": 0.5
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 3,
+   "flagged_paid": 2,
+   "recall": 0.0256,
+   "false_flag_rate": 0.0067,
+   "precision": 0.6,
+   "threshold": 0.6
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 2,
+   "flagged_paid": 1,
+   "recall": 0.0171,
+   "false_flag_rate": 0.0034,
+   "precision": 0.6667,
+   "threshold": 0.7
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 2,
+   "flagged_paid": 0,
+   "recall": 0.0171,
+   "false_flag_rate": 0.0,
+   "precision": 1.0,
+   "threshold": 0.8
+  },
+  {
+   "refused": 117,
+   "paid": 297,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null,
+   "threshold": 0.9
+  }
+ ],
+ "by_cost_type": {
+  "Advertising and contact cards": {
+   "refused": 16,
+   "paid": 40,
+   "flagged_refused": 1,
+   "flagged_paid": 0,
+   "recall": 0.0625,
+   "false_flag_rate": 0.0,
+   "precision": 1.0
+  },
+  "Bought-in services": {
+   "refused": 8,
+   "paid": 20,
+   "flagged_refused": 2,
+   "flagged_paid": 2,
+   "recall": 0.25,
+   "false_flag_rate": 0.1,
+   "precision": 0.5
+  },
+  "Business rates": {
+   "refused": 2,
+   "paid": 4,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Equipment - hire": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Equipment - purchase": {
+   "refused": 28,
+   "paid": 70,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Hospitality": {
+   "refused": 16,
+   "paid": 41,
+   "flagged_refused": 3,
+   "flagged_paid": 1,
+   "recall": 0.1875,
+   "false_flag_rate": 0.0244,
+   "precision": 0.75
+  },
+  "Insurance - buildings": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Insurance - contents": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Landline phone & internet - rental & usage": {
+   "refused": 2,
+   "paid": 5,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Maintenance, Redecorations & Repairs": {
+   "refused": 2,
+   "paid": 5,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Mobile telephone - contract & usage": {
+   "refused": 3,
+   "paid": 8,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Mobile telephone - equipment purchase": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Moving Fees": {
+   "refused": 4,
+   "paid": 10,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Newspapers, journals, magazines": {
+   "refused": 18,
+   "paid": 44,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Removals": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Rent": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Software & applications": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Stationery & printing": {
+   "refused": 4,
+   "paid": 10,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Training - staff": {
+   "refused": 3,
+   "paid": 8,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Utilities": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Venue hire, meetings & surgeries": {
+   "refused": 1,
+   "paid": 3,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  },
+  "Website hosting and design": {
+   "refused": 2,
+   "paid": 5,
+   "flagged_refused": 0,
+   "flagged_paid": 0,
+   "recall": 0.0,
+   "false_flag_rate": 0.0,
+   "precision": null
+  }
+ },
+ "by_detail_kind": {
+  "card line only": {
+   "refused": 68,
+   "paid": 155,
+   "flagged_refused": 1,
+   "flagged_paid": 0,
+   "recall": 0.0147,
+   "false_flag_rate": 0.0,
+   "precision": 1.0
+  },
+  "words about the purpose": {
+   "refused": 49,
+   "paid": 142,
+   "flagged_refused": 5,
+   "flagged_paid": 3,
+   "recall": 0.102,
+   "false_flag_rate": 0.0211,
+   "precision": 0.625
+  }
+ },
+ "ranking_auc": 0.5351,
+ "raw_labels": {
+  "paid/insufficient_information": 294,
+  "paid/violation": 3,
+  "refused/insufficient_information": 111,
+  "refused/violation": 6
+ },
+ "conformal_status": {
+  "unsure": 414
+ },
+ "sapling_calls_this_run": 0,
+ "rows": [
+  {
+   "id": "ipsa-0001",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0579,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0002",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0519,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0003",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0912,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0004",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0956,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0005",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0765,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0006",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0659,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0007",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.052,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0008",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0661,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0009",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0629,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0010",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0853,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0011",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0947,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0012",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0686,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0013",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0912,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0014",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1105,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0015",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0905,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0016",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1209,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0017",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0592,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0018",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0672,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0019",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1336,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0020",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0972,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0021",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0472,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0022",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0655,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0023",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0879,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0024",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.072,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0025",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0687,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0026",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0709,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0027",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0648,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0028",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0683,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0029",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1683,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0030",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0732,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0031",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1091,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0032",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0649,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0033",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0665,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0034",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.076,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0035",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0639,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0036",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0657,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0037",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1065,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0038",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0629,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0039",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0782,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0040",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0865,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0041",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0691,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0042",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0875,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0043",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1107,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0044",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.07,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0045",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0587,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0046",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0627,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0047",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1148,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0048",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0571,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0049",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.068,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0050",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0578,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0051",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0707,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0052",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1074,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0053",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0765,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0054",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.4584,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0055",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0515,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0056",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.091,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0057",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0698,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0058",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.2458,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0059",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1099,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0060",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0379,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0061",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0696,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0062",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0632,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0063",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.046,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0064",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0492,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0065",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1099,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0066",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0746,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0067",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.084,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0068",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0908,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0069",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0586,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0070",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0828,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0071",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0906,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0072",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0569,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0073",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0697,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0074",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0668,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0075",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0699,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0076",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0679,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0077",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0638,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0078",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0688,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0079",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0888,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0080",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.046,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0081",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0541,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0082",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0731,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0083",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0811,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0084",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0434,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0085",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.5649,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0086",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0624,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0087",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0646,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0088",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1305,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0089",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0708,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0090",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0091",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0896,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0092",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0672,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0093",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0542,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0094",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0468,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0095",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0625,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0096",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1395,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0097",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0475,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0098",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.132,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0099",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0696,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0100",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1301,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0101",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0825,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0102",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0628,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0103",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0755,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0104",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0407,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0105",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0688,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0106",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0543,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0107",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0806,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0108",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0972,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0109",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0661,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0110",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0473,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0111",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0421,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0112",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0631,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0113",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0666,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0114",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0115",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0723,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0116",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0469,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0117",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.113,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0118",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0823,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0119",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0682,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0120",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.6203,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0121",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.067,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0122",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1172,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0123",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0976,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0124",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0644,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0125",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0457,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0126",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0706,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0127",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.3477,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0128",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0749,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0129",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0981,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0130",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.07,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0131",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0471,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0132",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0485,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0133",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0779,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0134",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0757,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0135",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0428,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0136",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0561,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0137",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.2636,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0138",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.083,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0139",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0715,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0140",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1069,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0141",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1022,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0142",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0817,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0143",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0679,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0144",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0678,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0145",
+   "label": "paid",
+   "raw_label": "violation",
+   "violation": 0.4938,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0146",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0676,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0147",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0443,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0148",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0595,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0149",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1114,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0150",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0826,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0151",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0869,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0152",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0645,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0153",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0479,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0154",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.063,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0155",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0639,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0156",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.068,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0157",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.093,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0158",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0892,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0159",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0892,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0160",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0699,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0161",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0767,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0162",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0948,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0163",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0753,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0164",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0668,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0165",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1169,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0166",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0511,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0167",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0628,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0168",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0169",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0484,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0170",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0657,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0171",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0889,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0172",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0495,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0173",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0681,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0174",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1063,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0175",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0873,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0176",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0543,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0177",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0615,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0178",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.072,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0179",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0915,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0180",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0749,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0181",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0605,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0182",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0483,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0183",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0858,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0184",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0837,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0185",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0484,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0186",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0875,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0187",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0721,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0188",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1008,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0189",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0739,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0190",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1021,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0191",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0694,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0192",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0626,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0193",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0728,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0194",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0525,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0195",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0993,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0196",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1137,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0197",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0727,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0198",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0881,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0199",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1074,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0200",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0912,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0201",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0498,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0202",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0498,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0203",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0845,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0204",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0668,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0205",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1101,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0206",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0512,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0207",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0833,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0208",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.073,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0209",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0808,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0210",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.8666,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0211",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0727,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0212",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0918,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0213",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0658,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0214",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0546,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0215",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1214,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0216",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0518,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0217",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0932,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0218",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0527,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0219",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.056,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0220",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1273,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0221",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0488,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0222",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0223",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1343,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0224",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0477,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0225",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.4297,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0226",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0425,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0227",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0508,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0228",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0639,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0229",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0766,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0230",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0673,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0231",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0778,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0232",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0753,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0233",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0835,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0234",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0749,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0235",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1365,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0236",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0712,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0237",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0677,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0238",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.054,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0239",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0789,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0240",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0833,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0241",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0699,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0242",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0686,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0243",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0704,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0244",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0669,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0245",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0579,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0246",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.5187,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0247",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1436,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0248",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.2904,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0249",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0542,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0250",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1146,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0251",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.064,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0252",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0461,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0253",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1275,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0254",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0625,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0255",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0667,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0256",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0735,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0257",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0735,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0258",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0658,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0259",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0701,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0260",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0261",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0862,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0262",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0987,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0263",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0418,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0264",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.056,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0265",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0672,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0266",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1332,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0267",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0712,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0268",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0538,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0269",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0496,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0270",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0592,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0271",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0681,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0272",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1276,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0273",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.08,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0274",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0496,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0275",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1349,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0276",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0603,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0277",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0446,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0278",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.2985,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0279",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1287,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0280",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0726,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0281",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0773,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0282",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0783,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0283",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0679,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0284",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0765,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0285",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0448,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0286",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0738,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0287",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.061,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0288",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0843,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0289",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0932,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0290",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0491,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0291",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0616,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0292",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0515,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0293",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0996,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0294",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.091,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0295",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0957,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0296",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0297",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0631,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0298",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.081,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0299",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.4171,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0300",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1206,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0301",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0577,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0302",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0795,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0303",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0556,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0304",
+   "label": "paid",
+   "raw_label": "violation",
+   "violation": 0.6958,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0305",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0634,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0306",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0491,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0307",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0624,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0308",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.179,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0309",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0916,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0310",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0543,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0311",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0667,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0312",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0525,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0313",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0509,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0314",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1009,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0315",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0489,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0316",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1131,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0317",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0592,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0318",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0714,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0319",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0497,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0320",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0881,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0321",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0905,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0322",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0791,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0323",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0737,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0324",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0446,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0325",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0587,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0326",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1123,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0327",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0738,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0328",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.066,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0329",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0626,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0330",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0686,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0331",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0497,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0332",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0696,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0333",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0406,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0334",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0723,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0335",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0721,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0336",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0642,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0337",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0639,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0338",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.082,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0339",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0827,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0340",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0564,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0341",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1331,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0342",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.066,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0343",
+   "label": "paid",
+   "raw_label": "violation",
+   "violation": 0.7271,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0344",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0685,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0345",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0678,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0346",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.147,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0347",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0671,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0348",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0749,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0349",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1395,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0350",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.08,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0351",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0677,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0352",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0538,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0353",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0474,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0354",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1107,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0355",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.053,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0356",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0656,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0357",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0631,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0358",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0665,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0359",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0715,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0360",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1119,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0361",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0435,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0362",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.069,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0363",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.056,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0364",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0548,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0365",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0659,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0366",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1296,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0367",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0616,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0368",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.063,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0369",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.068,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0370",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0631,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0371",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0746,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0372",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0509,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0373",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0593,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0374",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.075,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0375",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1024,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0376",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1343,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0377",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0802,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0378",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1289,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0379",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0659,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0380",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1388,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0381",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0504,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0382",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0682,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0383",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0722,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0384",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0647,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0385",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0707,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0386",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0638,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0387",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0668,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0388",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.43,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0389",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0813,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0390",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0876,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0391",
+   "label": "refused",
+   "raw_label": "violation",
+   "violation": 0.8426,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0392",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0525,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0393",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0699,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0394",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0684,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0395",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0708,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0396",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1021,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0397",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0623,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0398",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0652,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0399",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0634,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0400",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0381,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0401",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0601,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0402",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0519,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0403",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.2755,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0404",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1176,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0405",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0878,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0406",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0568,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0407",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.047,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0408",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.0631,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0409",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.1602,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0410",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0816,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0411",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.051,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0412",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0516,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0413",
+   "label": "paid",
+   "raw_label": "insufficient_information",
+   "violation": 0.0659,
+   "status": "unsure"
+  },
+  {
+   "id": "ipsa-0414",
+   "label": "refused",
+   "raw_label": "insufficient_information",
+   "violation": 0.1397,
+   "status": "unsure"
+  }
+ ]
+}
