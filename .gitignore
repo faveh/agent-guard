@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.env
+.cache/
+*.tmp
+
+# mp-expense-check: the downloaded IPSA CSV and Scheme PDF
+mp-expense-check/raw/

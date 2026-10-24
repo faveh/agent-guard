@@ -1,0 +1,370 @@
+{
+ "sources": {
+  "scheme": "https://assets.ctfassets.net/nc7h1cs4q6ic/5j9dlpZsDtyFgqi43bBB91/7eaea5bcc329496878b420bf2e511586/Seventeenth_edition_of_the_Scheme_2024-25.pdf",
+  "scheme_page": "https://theipsa.org.uk/publications/the-scheme",
+  "guidance": "https://information.ipsaonline.org.uk/guidance/office-costs",
+  "licence": "Open Government Licence v3.0 (as shown on theipsa.org.uk)",
+  "note": "Scheme text is quoted word for word from the 2024-25 edition (in force for these claims), with line breaks and page numbers removed. Guidance text is quoted word for word from the current Office costs page; list items are joined with \"; \". The guidance is the April 2026 version, not the one in force in 2024-25. The guidance list of communications IPSA now funds is left out, because it allows newsletters and the 2024-25 Scheme (para 6.5c) did not."
+ },
+ "passages": {
+  "scheme-3.2": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 3.2",
+   "text": "MPs are responsible for complying with the Scheme rules. In making any claim under the Scheme, MPs must certify that the expenditure was for the performance of their parliamentary functions, and that in incurring the expenditure they had complied with the Scheme.",
+   "label": "IPSA Scheme 2024-25, para 3.2"
+  },
+  "scheme-3.4": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 3.4",
+   "text": "The following are examples of activities that are not considered parliamentary for the purposes of this Scheme, and are therefore not claimable from IPSA: a. attendance at political party conferences or meetings; b. work which is conducted for or at the behest of a political party; c. activities relating to reviews of parliamentary constituency boundaries; d. activities which could be construed as campaign expenditure within the scope of the Political Parties, Elections and Referendums Act 2000, or election expenses within the scope of the Representation of the People Act 1983; e. any other activities whose purpose is to give MPs a campaigning advantage in general elections and referendums; f. work relating to delegations to an international assembly; or g. work relating to the performance of ministerial functions.",
+   "label": "IPSA Scheme 2024-25, para 3.4"
+  },
+  "scheme-3.26": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 3.26",
+   "text": "IPSA will not pay any claims for penalty charges or additional charges, such as those for late payments.",
+   "label": "IPSA Scheme 2024-25, para 3.26"
+  },
+  "scheme-3.27": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 3.27",
+   "text": "IPSA will not pay any claims for costs that are insurable or can be funded from other sources.",
+   "label": "IPSA Scheme 2024-25, para 3.27"
+  },
+  "scheme-4.4": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.4",
+   "text": "Associated costs include: a. utility bills (gas, electricity, other fuel and water); b. council tax; c. ground rent and service charges; d. in the case of MPs claiming under 4.3c, buildings insurance; e. purchase, installation and maintenance of ‘routine’ security measures, i.e. not those which are now funded by the House of Commons as recommended or further security measures (see Chapter 10); f. installation of a landline telephone line, line rental and usage charges; and g. installation of a broadband connection and usage charges.",
+   "label": "IPSA Scheme 2024-25, para 4.4"
+  },
+  "scheme-4.5": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.5",
+   "text": "Associated costs do not include, and no claims will be paid for: a. cleaning; b. gardening; c. the purchase or maintenance of furniture; d. home contents insurance, television services, or television licences.",
+   "label": "IPSA Scheme 2024-25, para 4.5"
+  },
+  "scheme-4.7": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.7",
+   "text": "Where MPs are claiming for rent and/or associated costs, they must be resident at the property for which claims are being made, and may not sublet the property, or any part of it.",
+   "label": "IPSA Scheme 2024-25, para 4.7"
+  },
+  "scheme-4.16": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.16",
+   "text": "Any costs of drawing up rental agreements and any agency fees incurred on entering into or extending a contract can be claimed from the accommodation costs budget. No additional funding is available for such costs.",
+   "label": "IPSA Scheme 2024-25, para 4.16"
+  },
+  "scheme-4.17": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.17",
+   "text": "Removal costs for moving to new accommodation may be claimed from the contingency budget. No pre-approval is required. Other costs associated with moving, including any legal costs, must be claimed from the accommodation costs budget.",
+   "label": "IPSA Scheme 2024-25, para 4.17"
+  },
+  "scheme-4.24": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 4.24",
+   "text": "An MP who intends to claim for rental costs may apply to IPSA for a loan to cover any deposit payable at the commencement of a tenancy. This loan will not be deducted from the accommodation costs budget.",
+   "label": "IPSA Scheme 2024-25, para 4.24"
+  },
+  "scheme-6.1": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.1",
+   "text": "The office costs budget is provided to meet the costs of renting, equipping and running MPs’ constituency offices, surgeries, and other activities which support their parliamentary functions, where these costs are not covered by other budgets under the Scheme.",
+   "label": "IPSA Scheme 2024-25, para 6.1"
+  },
+  "scheme-6.4": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.4",
+   "text": "MPs are entitled to exercise reasonable discretion over claims for items that meet the purposes of the office costs budget, provided that the claims adhere to the fundamental principles and general conditions of the Scheme. They must also observe the conditions set out in paragraph 6.5.",
+   "label": "IPSA Scheme 2024-25, para 6.4"
+  },
+  "scheme-6.5": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.5",
+   "text": "IPSA will not pay claims for any of the following: a. alcoholic drinks; b. stationery provided by the House of Commons; c. newsletters; d. funding of any material, other than websites, that contains a party-political logo or emblem; or e. personal accountancy or tax advice.",
+   "label": "IPSA Scheme 2024-25, para 6.5"
+  },
+  "scheme-6.6": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.6",
+   "text": "MPs may claim for the costs of a home office, if that is where they routinely work from. IPSA will only pay claims for costs which are additional to those which are part of the normal cost of living in the home. Staff members who are home-based may claim for homeworking costs that are additional to normal costs of living in the home, or receive the homeworking allowance under 7.17, but cannot do both in the same period.",
+   "label": "IPSA Scheme 2024-25, para 6.6"
+  },
+  "scheme-6.9": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.9",
+   "text": "Removal costs for moving to new office premises may be claimed from the contingency budget. No pre-approval is required. Other costs associated with moving, including any legal costs, must be claimed from the office costs budget.",
+   "label": "IPSA Scheme 2024-25, para 6.9"
+  },
+  "scheme-6.13": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.13",
+   "text": "IPSA will pay for rent on an office only after it has been registered and accompanied by the required documentation including the MP's rental agreement.",
+   "label": "IPSA Scheme 2024-25, para 6.13"
+  },
+  "scheme-6.14": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.14",
+   "text": "Claims for the following costs will only be allowed if the constituency or home office has been registered with IPSA, and if they comply with paragraph 6.6 in the case of home offices: a. energy and water bills; b. business rates (not for home offices); c. contents insurance; d. buildings insurance (not for home offices); e. rental and usage costs for telephone and internet access.",
+   "label": "IPSA Scheme 2024-25, para 6.14"
+  },
+  "scheme-6.17": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.17",
+   "text": "MPs should negotiate a clause in their contracts to allow them to give two months’ notice in the event of a change in circumstances, such as leaving Parliament or any other circumstances which means they have to vacate the property. They will only be able to claim for rent and other office costs incurred during the winding-up period after leaving Parliament. Any further costs incurred after that period will not be funded by IPSA.",
+   "label": "IPSA Scheme 2024-25, para 6.17"
+  },
+  "scheme-6.25": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.25",
+   "text": "An MP who intends to claim from the office costs budget for rental costs may apply to IPSA for a loan to cover any deposit payable at the start of a tenancy.",
+   "label": "IPSA Scheme 2024-25, para 6.25"
+  },
+  "scheme-6.29": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 6.29",
+   "text": "When submitting claims for telephone calls, MPs should only claim for that proportion of the costs which has been incurred for parliamentary purposes.",
+   "label": "IPSA Scheme 2024-25, para 6.29"
+  },
+  "scheme-7.3": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 7.3",
+   "text": "The staffing budget may be used to meet the following costs: a. staff salaries, employers' contributions to National Insurance and employers' contributions to pension schemes; b. payments for pooled staffing services, which provide research, briefing and drafting services to groups of MPs, and have an arrangement with IPSA in place; c. payments for bought-in services, where staffing services are provided by companies, self- employed individuals and others not on the MP’s payroll; d. overtime payments, to the extent that these are specified in staff terms and conditions; e. payments for childcare vouchers for staff, cycle-to-work schemes, or other payments by way of salary sacrifice; f. reward and recognition payments, except where the employee is a connected party; g. one-off health and welfare costs associated with provision of staffing support, such as eyesight tests and occupational health assessments; h. costs associated with apprenticeships that meet the standards of the National Apprenticeship Service; i. the incidental expenses of volunteers; j. staff training costs (which may also be claimed from the office costs budget).",
+   "label": "IPSA Scheme 2024-25, para 7.3"
+  },
+  "scheme-8.5": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 8.5",
+   "text": "Winding-up costs may include: a. Salary, National Insurance and employer pension contribution costs, and any overtime payments for staff who continue to work for the MP during the winding-up period; b. accommodation rental payments and/or associated costs during the winding-up period; c. any office and travel costs during the winding-up period which remain necessary for the completion of the MP’s parliamentary functions, including any contractual liabilities, such as office rent, utility bills and equipment rental payments, subject to paragraph 8.7; d. the costs, including removals, of leaving any office or accommodation funded under the Scheme.",
+   "label": "IPSA Scheme 2024-25, para 8.5"
+  },
+  "scheme-8.7": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 8.7",
+   "text": "IPSA will not pay claims for the purchase of new office equipment (including IT) or furniture during the winding-up period. If former MPs have an exceptional need for new furniture or equipment during the winding-up period, they must apply for contingency funding.",
+   "label": "IPSA Scheme 2024-25, para 8.7"
+  },
+  "scheme-10.17": {
+   "ref": "IPSA Scheme of MPs’ Staffing and Business Costs 2024-25 (17th edition), para 10.17",
+   "text": "While they may continue to exercise discretion in claiming for office costs, MPs should only purchase office furniture, IT hardware and other capital equipment where there is an exceptional need to do so.",
+   "label": "IPSA Scheme 2024-25, para 10.17"
+  },
+  "guide-hospitality": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Hospitality costs",
+   "text": "Funding may be requested for hospitality costs such as tea and coffee to offer visitors to the constituency office or surgeries, or light refreshments such as biscuits at a meeting. It is not intended to cover a routine meal or refreshment costs for the MP, staff members or others. Team meals out (e.g. at a pub or restaurant) or social events are also not eligible for funding.",
+   "label": "IPSA guidance: Hospitality costs"
+  },
+  "guide-not-funded": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Office costs – what IPSA does not fund",
+   "text": "IPSA will not fund: Attendance at political party conferences or meetings; Work conducted at the behest of a political party; Activities relating to reviews of parliamentary constituency boundaries; Activities that could be construed as campaign expenditure within the scope of the Political Parties, Elections and Referendums Act 2000 or election expenses within the scope of the Representation of the People Act 1983; Any other activities whose purpose is to give MPs a campaigning advantage at general elections and referendums; Work relating to delegations to an international assembly; Work relating to the performance of ministerial functions; Costs of a personal nature including financial or tax advice; Penalties or additional charges such as those for late payments; Costs that are insured or can be funded from other sources; Purchase of alcohol; Rent, fees or other payments where the MP, another MP or a connected party is the supplier or landlord; Stationery provided by the House of Commons; Any material (other than websites) that contains a party-political logo or emblem; Accountancy or tax advice; Team meals out (e.g. at a pub or restaurant) or social events.",
+   "label": "IPSA guidance: Office costs – what IPSA does not fund"
+  },
+  "guide-communications": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Advertising, publications and social media: What IPSA does not fund",
+   "text": "Whie not an exhaustive list, IPSA does not provide funding for: Material that includes party-political or campaigning statements; Communications about local elections; Data gathering that supports campaigning activity or will be shared with the political party or another outside organisation; Communications that feature the views and/or endorsements of other politicians; Content that primarily serves to promote government policy or party messaging.",
+   "label": "IPSA guidance: Advertising, publications and social media: What IPSA does not fund"
+  },
+  "guide-bought-in": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Bought-in services",
+   "text": "MPs may request funding for specialist support and advice where it may be more economical and practical to hire professional services from companies, self-employed individuals and others not on the MP’s payroll. IPSA refers to these services as ‘bought-in services'. Bought-in services are broken down into three types: Administrative services – e.g. temporary administrative support for constituency office work. These costs can be met from the staffing budget.; Professional and consultancy – e.g. legal, project or research services. These costs can be met from either the office costs or staffing budget.; Communications and media – e.g. social media management, speech drafting and design of constituent communication materials. These costs can be met from either the office costs or staffing budget..",
+   "label": "IPSA guidance: Bought-in services"
+  },
+  "guide-website": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Website costs and management",
+   "text": "MPs may use IPSA funding to cover website costs such as hosting, design and professional fees for website updates, provided the content on the website complies with the regulatory principles and the Scheme. The following types of content are not allowed on IPSA-funded platforms. Please note this is not an exhaustive list: Promotion of government policy or party messaging – e.g. recaps of government or party policy accompanied by value judgements on their success; Party-political material – including messages, imagery or campaigning statements; Communications about local elections; Data gathering for campaigning – e.g. surveys designed to support campaigning activity (see guidance on data collection); Links to political party activities – e.g. including joining, volunteering or donating; Part-funding of platforms – IPSA funded websites must not be part-funded by political parties to included party-political content.",
+   "label": "IPSA guidance: Website costs and management"
+  },
+  "guide-festive": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Festive and celebratory funding requests",
+   "text": "There are some activities that IPSA will not fund as they do not align with our regulatory principles. These include: Costs for a team meal out including for festive events (e.g. at a restaurant or pub); Organising a social event within the constituency; Cost of community festive displays.",
+   "label": "IPSA guidance: Festive and celebratory funding requests"
+  },
+  "guide-it": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Funding for IT equipment",
+   "text": "The Parliamentary Digital Service (PDS) provides core IT equipment to MPs and their staff members and should be the first port of call for requests. IPSA provides funding for IT equipment that is not on the list of equipment provided by the Parliamentary Digital Service (PDS). This means that IPSA funding can be used for equipment that is of a different type/nature rather than just alternatives to PDS-provided items. You are advised not to make the purchase before you have IPSA’s approval. If the cost of any equipment needed is below £50, it can be funded through your office costs budget without prior approval. If the equipment is on the list of equipment provided by PDS, it will not be funded by IPSA. The exception to this is items under £50, which can be funded through an MP’s office costs budget without prior approval. However, MPs should still ensure they are acting in line with IPSA’s principles in doing so. Funding will not be provided for equipment to be used for work that would be considered party-political or to support election campaigning. If you incur a cost before seeking approval from IPSA, repayment may be required if the item (or similar) could have been provided by PDS or if it is not of a different type/nature to what is provided by PDS.",
+   "label": "IPSA guidance: Funding for IT equipment"
+  },
+  "guide-homeworking": {
+   "ref": "IPSA guidance, Office costs (updated April 2026): Homeworking costs for MPs",
+   "text": "IPSA will only provide funding for homeworking costs if the MP can demonstrate that these costs have been incurred as a result of working from home and are additional to the normal costs of running the home. IPSA does not fund the normal running costs of living in a home owned by the MP as homeworking costs, including: Any amount of rent or mortgage; Council tax; Buildings insurance; Standing charges for utilities, broadband or phone line rental.",
+   "label": "IPSA guidance: Homeworking costs for MPs"
+  }
+ },
+ "cost_types": {
+  "Office Costs|Equipment - purchase": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-it",
+   "scheme-8.7",
+   "scheme-10.17"
+  ],
+  "Office Costs|Equipment - hire": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-it"
+  ],
+  "Office Costs|Software & applications": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-it"
+  ],
+  "Office Costs|Mobile telephone - equipment purchase": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-it",
+   "scheme-8.7"
+  ],
+  "Office Costs|Mobile telephone - contract & usage": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.29"
+  ],
+  "Office Costs|Landline phone & internet - rental & usage": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.14",
+   "scheme-6.29",
+   "guide-homeworking"
+  ],
+  "Office Costs|Newspapers, journals, magazines": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-3.2",
+   "guide-not-funded"
+  ],
+  "Office Costs|Advertising and contact cards": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-3.4",
+   "guide-communications"
+  ],
+  "Office Costs|Stationery & printing": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-3.4",
+   "guide-communications"
+  ],
+  "Office Costs|Hospitality": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-hospitality",
+   "guide-festive"
+  ],
+  "Office Costs|Bought-in services": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-bought-in"
+  ],
+  "Office Costs|Website hosting and design": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "guide-website"
+  ],
+  "Office Costs|Venue hire, meetings & surgeries": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-3.4",
+   "guide-hospitality"
+  ],
+  "Office Costs|Business rates": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.14",
+   "scheme-6.17",
+   "scheme-3.26"
+  ],
+  "Office Costs|Insurance - contents": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.14"
+  ],
+  "Office Costs|Insurance - buildings": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.14"
+  ],
+  "Office Costs|Maintenance, Redecorations & Repairs": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.6"
+  ],
+  "Office Costs|Rent": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-6.13",
+   "scheme-6.17",
+   "scheme-6.25"
+  ],
+  "Office Costs|Training - staff": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-7.3"
+  ],
+  "Staffing|Bought-in services": [
+   "scheme-7.3",
+   "guide-bought-in",
+   "scheme-3.27"
+  ],
+  "Staffing|Training - staff": [
+   "scheme-7.3",
+   "scheme-3.27"
+  ],
+  "Accommodation|Utilities": [
+   "scheme-4.4",
+   "scheme-4.5",
+   "scheme-4.7"
+  ],
+  "Accommodation|Moving Fees": [
+   "scheme-4.16",
+   "scheme-4.17",
+   "scheme-4.5"
+  ],
+  "Miscellaneous|Moving Fees": [
+   "scheme-6.9",
+   "scheme-4.17",
+   "scheme-8.5"
+  ],
+  "Miscellaneous|Removals": [
+   "scheme-6.9",
+   "scheme-4.17",
+   "scheme-8.5"
+  ]
+ },
+ "defaults": {
+  "Office Costs": [
+   "scheme-6.1",
+   "scheme-6.4",
+   "scheme-6.5",
+   "scheme-3.27",
+   "scheme-3.2"
+  ],
+  "Accommodation": [
+   "scheme-4.4",
+   "scheme-4.5"
+  ],
+  "Staffing": [
+   "scheme-7.3",
+   "scheme-3.27"
+  ],
+  "*": [
+   "scheme-3.2",
+   "scheme-3.27"
+  ]
+ }
+}

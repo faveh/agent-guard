@@ -1,0 +1,8 @@
+{
+  "name": "Company travel and expenses (example)",
+  "measured": false,
+  "claimant": "An employee",
+  "claim_sentence": "This expense claim can be reimbursed under the company travel and expenses policy.",
+  "summary": "A hand-written example policy and 10 hand-written claims, to show the same engine on another industry.",
+  "data_note": "Example, not measured. The policy and claims are made up for this demo; no real company or person."
+}
