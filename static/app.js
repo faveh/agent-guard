@@ -87,6 +87,7 @@ async function typeText(el, text, cps = 110) {
   }
 }
 function callText(c) {
+  if (c.call) return c.call;
   if (c.kind === "refund") {
     const a = c.attempt;
     return `issue_refund(order_id="${a.order_id}", amount_gbp=${a.amount_gbp}, reason="${a.reason}")`;
@@ -125,6 +126,7 @@ function keyVerdict(truth, outcome) {
 async function runGate(c) {
   $("slot-empty").hidden = true;
   $("ch-shop").textContent = c.shop || "Action slip";
+  $("ch-by").textContent = c.by || "Written by the agent · not run yet";
   $("ch-do").textContent = c.action.plain || c.action.name;
   $("ch-amt").textContent = c.amount ? money(c.amount.value, c.amount.currency, 2) : "";
   $("ch-micr").textContent = c.micr || callText(c);
@@ -336,6 +338,8 @@ async function tryRefund(e) {
     d.remove();
     const c = fromGuard(data, { customer: text, label: `${orderId} · your request`, source: "Your request" });
     c.callWho = "No agent here. The form makes the refund slip";
+    c.call = c.micr;
+    c.by = "Written by the form · not run yet";
     await afterAgent(c);
   } catch (err) {
     d.remove();
